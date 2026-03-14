@@ -3,7 +3,7 @@
 echo "This is a test script for the GitHub Actions workflow."
 
 EXPECTED_OUTPUT="Hello, Ahmed!"
-ACTUAL_OUTPUT=$(node -e "console.log(require('./app.js').greet('Ahmed'))")
+ACTUAL_OUTPUT=$(node -e "console.log(require('./src/app.js').greet('Ahmed'))")
 
 if [ "$ACTUAL_OUTPUT" == "$EXPECTED_OUTPUT" ]; then
   echo "Test passed: Output is correct."
