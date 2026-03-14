@@ -6,7 +6,7 @@ module.exports = {
   greet
 };
 
-if (require.main === module) {
-  const name = process.argv[2] || 'World';
-  console.log(greet(name));
-}
+// if (require.main === module) {
+//   const name = process.argv[2] || 'World';
+//   console.log(greet(name));
+// }
