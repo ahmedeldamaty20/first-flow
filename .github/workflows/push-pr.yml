@@ -1,0 +1,30 @@
+name: Push PR Workflow
+
+on: 
+  push:
+    branches:
+      - master
+      - "release/**"
+    paths: 
+      - "src/**"
+  pull_request: 
+    branches:
+      - master
+      - "release/**"
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a welcome message
+        run: echo "Welcome to our Push PR Workflow"
+
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: List repo files
+        run: ls -la
+
+      - name: Run tests
+        run: npm test
