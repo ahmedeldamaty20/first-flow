@@ -1,0 +1,11 @@
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday at 8:00 AM
+
+jobs:
+  daily-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run daily task
+        run: echo "This is a scheduled workflow running at 8:00 AM every Monday"
